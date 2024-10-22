@@ -11,33 +11,53 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: beige;">
 
     <h1>Welcome!</h1>
     
-    <label for="fname">First Name:</label>
-    <input type="text" id="fname"><br><br>
-    
-    <label for="lname">Last Name:</label>
-    <input type="text" id="lname"><br><br>
-    
-    <label for="age">Age:</label>
-    <input type="number" id="age"><br><br>
-    
-    <button onclick="greet()">Greet</button>
-    
-    <p id="greet" style="font-size: x-large;">Welcome!</p>
-    
+    <form id="name-form">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname"><br><br>
+        
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname"><br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age"><br><br>
+        
+        <button type="button" onclick="greet()">Greet</button>
+    </form>
+
+    <p id="greet"></p>
+
+    <hr> 
+
     <h2>Trivia Question</h2>
     <p>Is the ocean a soup?</p>
-    <label><input type="radio" id="yes" name="trivia" value="yes"> Yes</label><br>
-    <label><input type="radio" id="no" name="trivia" value="no"> No</label><br>
-    <label><input type="radio" id="maybe" name="trivia" value="maybe"> Maybe</label><br>
+    <label><input type="radio" id="yes" name="trivia1" value="yes"> Yes</label><br>
+    <label><input type="radio" id="no" name="trivia1" value="no"> No</label><br>
+    <label><input type="radio" id="maybe" name="trivia1" value="maybe"> Maybe</label><br>
     
     <input type="button" value="Submit" onclick="trivia1();">
     <p id="trivia1-answer" style="font-size: large;"></p> 
-    
-    <script src="js/truth.js"></script>
 
+    <hr>
+
+    <h2>Two Truths and a Lie. Which one is the lie?</h2>
+    <label><input type="radio" id="ears" name="trivia2" value="ears"> I can wiggle my ears</label><br>
+    <label><input type="radio" id="backflip" name="trivia2" value="backflip"> I can do a backflip</label><br>
+    <label><input type="radio" id="cricket" name="trivia2" value="cricket"> I've eaten a cricket before</label><br>
+
+    <input type="button" value="Submit" onclick="trivia2();">
+    <p id="trivia2-answer" style="font-size: large;"></p> 
+
+    <hr>
+
+    <h2>What's the current year?</h2>
+    <input type="number" id="year-input" placeholder="Enter the year">
+    <input type="button" value="Submit" onclick="trivia3();">
+    <p id="trivia3-answer" style="font-size: large;"></p>
+
+    <script src="js/truth.js"></script>
 </body>
 </html>
