@@ -49,7 +49,7 @@ function trivia3() {
     let currentYear = new Date().getFullYear(); 
 
     if (yearInput == currentYear) { 
-        triviaAnswer3.innerHTML = fname + ", correct! The current year is " + currentYear + "!";
+        triviaAnswer3.innerHTML = fname + ", that is correct! The current year is " + currentYear + "!";
     } else {
         triviaAnswer3.innerHTML = fname + ", that's not correct. Have you been living under a rock? The current year is " + currentYear + ".";
     }
